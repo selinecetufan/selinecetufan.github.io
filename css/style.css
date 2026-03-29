@@ -2,8 +2,32 @@ body {
 	font-family: sans-serif;
 }
 
+.content-width {
+	max-width: 1024px;
+}
+
+@media print {
+	.content-width {
+		max-width: 100%;
+	}
+
+	@page {
+		margin: 0.5in;
+
+		@bottom-center {
+			content: counter(page) "/" counter(pages);
+			font-size: 10pt;
+			color: #6c757d;
+		}
+	}
+}
+
 .max-w-30 {
 	width: 30px !important;
+}
+
+.text-justify {
+	text-align: justify;
 }
 
 a:link {
